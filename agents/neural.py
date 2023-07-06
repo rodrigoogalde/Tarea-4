@@ -37,8 +37,14 @@ class NNCat():
         # Se debe retornar el movimiento que lleve a un mejor estado futuro,
         # tomando el índice de mayor probabilidad de la salida de la red
         # Podemos obtener la predicción de un modelo sobre un vector x mediante prediction = model(x)
-        move = 0
+        # move = 0
         # =====================
+
+        # Obtenemos la predicción de la red para el estado actual
+        prediction = self.model(state)
+
+        # Tomamos la acción con la mayor probabilidad
+        move = np.argmax(prediction)
 
         return move
     
@@ -78,9 +84,14 @@ class NNMouse():
         # Se debe retornar el movimiento que lleve a un mejor estado futuro,
         # tomando el índice de mayor probabilidad de la salida de la red
         # Podemos obtener la predicción de un modelo sobre un vector x mediante prediction = model(x)
-        move = 0
+        # move = 0
         # =====================
+        
+        # Obtenemos la predicción de la red para el estado actual
+        prediction = self.model(state)
 
+        # Tomamos la acción con la mayor probabilidad
+        move = np.argmax(prediction)
         return move
     
     # Método vacío, no se utiliza en este tipo de agente

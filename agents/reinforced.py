@@ -79,6 +79,12 @@ class ReinforcedAgent:
         move = 0
         # =====================
 
+        # Obtener el índice del estado actual en la tabla Q
+        state_index = self.states_index[state]
+
+        # Obtener el movimiento que tiene el valor más alto en la tabla Q para el estado actual
+        move = np.argmax(self.q_table[state_index])
+
         return move
     
     def get_reward(self, lab_map, action, old_cat_pos, new_cat_pos, old_mouse_pos, new_mouse_pos):
@@ -93,11 +99,20 @@ class ReinforcedAgent:
         # ===== COMPLETAR =====
         # Se debe actualizar el valor asociado al par estado-acción en la Q-Table
         # recuerda que la acción jugada fue action en el estado state
-        self.q_table[self.states_index[state], action] = 0
+        # self.q_table[self.states_index[state], action] = 0
         # =====================
+
+        # Obtener los índices de los estados en la tabla Q
+        state_index = self.states_index[state]
+        new_state_index = self.states_index[new_state]
+
+        # Actualizar la tabla Q utilizando la ecuación de actualización de Q-Learning
+        self.q_table[state_index, action] = (1 - CAT_LR) * self.q_table[state_index, action] + CAT_LR * (reward + CAT_DISCOUNT_RATE * np.max(self.q_table[new_state_index]))
+
     
     def update_exploration(self, n_game):
-        pass
+        # Disminuir la tasa de exploración a medida que el agente juega más juegos
+        self.exploration_rate = MOUSE_MIN_EXPLORATION_RATE + (MOUSE_MAX_EXPLORATION_RATE - MOUSE_MIN_EXPLORATION_RATE) * np.exp(-MOUSE_EXPLORATION_DECAY_RATE * n_game)
 
 class RLCat(ReinforcedAgent):
 
@@ -108,15 +123,27 @@ class RLCat(ReinforcedAgent):
     def get_reward(self, lab_map, action, old_cat_pos, new_cat_pos, old_mouse_pos, new_mouse_pos):
         # ===== COMPLETAR =====
         # Se debe calcular el reward para la acción realizada por el agente
-        reward = 0
+        # reward = 0
         # =====================
+
+
+        # Si el gato captura al ratón, dar una recompensa positiva
+        if new_cat_pos == new_mouse_pos:
+            reward = 1
+        # Si el gato se mueve pero no captura al ratón, dar una recompensa negativa
+        else:
+            reward = -0.1
         return reward
     
     def update_exploration(self, n_game):
         # ===== COMPLETAR =====
         # Se debe actualizar la tasa de exploración del agente
-        self.exploration_rate = 0
+        # self.exploration_rate = 0
         # =====================
+
+        # Disminuir la tasa de exploración a medida que el gato juega más juegos
+        self.exploration_rate = CAT_MIN_EXPLORATION_RATE + (CAT_MAX_EXPLORATION_RATE - CAT_MIN_EXPLORATION_RATE) * np.exp(-CAT_EXPLORATION_DECAY_RATE * n_game)
+
 
         # Cada 1000 partidas, aprovecharemos de guardar la tabla de desempeño del agente
         if n_game % 1000 == 0:
@@ -131,16 +158,26 @@ class RLMouse(ReinforcedAgent):
     def get_reward(self, lab_map, action, old_cat_pos, new_cat_pos, old_mouse_pos, new_mouse_pos):
         # ===== COMPLETAR =====
         # Se debe calcular el reward para la acción realizada por el agente
-        reward = 0
+        # reward = 0
         # =====================
 
+                # Si el ratón es capturado por el gato, dar una recompensa negativa
+        if new_cat_pos == new_mouse_pos:
+            reward = -1
+        # Si el ratón escapa del gato, dar una recompensa positiva
+        else:
+            reward = 0.1
         return reward
     
     def update_exploration(self, n_game):
         # ===== COMPLETAR =====
         # Se debe actualizar la tasa de exploración del agente
-        self.exploration_rate = 0
+        # self.exploration_rate = 0
         # =====================
+
+        # Disminuir la tasa de exploración a medida que el ratón juega más juegos
+        self.exploration_rate = MOUSE_MIN_EXPLORATION_RATE + (MOUSE_MAX_EXPLORATION_RATE - MOUSE_MIN_EXPLORATION_RATE) * np.exp(-MOUSE_EXPLORATION_DECAY_RATE * n_game)
+
 
         # Cada 1000 partidas, aprovecharemos de guardar la tabla de desempeño del agente
         if n_game % 1000 == 0:

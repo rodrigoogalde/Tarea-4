@@ -6,7 +6,7 @@ from agents.neural import NNCat, NNMouse
 from agents.reinforced import RLCat, RLMouse
 
 # Si deseamos o no visualización en el juego
-VISUALIZATION = False
+VISUALIZATION = True
 
 # Número de partidas a jugar para entrenar
 NUM_EPISODES = 100000
@@ -15,11 +15,11 @@ NUM_EPISODES = 100000
 game = ChaseGame(visualization = VISUALIZATION)
 
 # Instanciamos los agentes
-cat = BaseCat(game.cat_pos)
-mouse = BaseMouse(game.mouse_pos)
+# cat = BaseCat(game.cat_pos)
+# mouse = BaseMouse(game.mouse_pos)
 
-# cat = NNCat(game.cat_pos, "NNCat.h5")         # Reemplazar con el nombre del archivo de la red neuronal (los agentes neuronales no aprenden en este archivo)
-# mouse = NNMouse(game.mouse_pos, "NNMouse.h5") # Reemplazar con el nombre del archivo de la red neuronal (los agentes neuronales no aprenden en este archivo)
+cat = NNCat(game.cat_pos, "NNCat.h5")         # Reemplazar con el nombre del archivo de la red neuronal (los agentes neuronales no aprenden en este archivo)
+mouse = NNMouse(game.mouse_pos, "NNMouse.h5") # Reemplazar con el nombre del archivo de la red neuronal (los agentes neuronales no aprenden en este archivo)
 
 # cat = RLCat(game.cat_pos)
 # mouse = RLMouse(game.mouse_pos)
