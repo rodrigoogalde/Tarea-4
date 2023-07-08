@@ -23,10 +23,12 @@ MOUSE_DISCOUNT_RATE = 0.1
 
 class ReinforcedAgent:
 
-    def __init__(self, position, table_name = None):
+    def __init__(self, position, table_name = None, alpha = 0.2, gamma = 0.9):
 
         # Posición inicial del agente
         self.pos = position
+        self.gamma = gamma
+        self.alpha = alpha
 
         # ===== CONSTRUCCIÓN DE LA Q-TABLE ===== #
         # Cargamos el mapa y buscamos las posiciones libres dentro de este
@@ -76,7 +78,7 @@ class ReinforcedAgent:
 
         # ===== COMPLETAR =====
         # Se debe retornar el movimiento que lleve a un mejor estado futuro, basándose en la Q-Table
-        move = 0
+        # move = 0
         # =====================
 
         # Obtener el índice del estado actual en la tabla Q
@@ -102,23 +104,36 @@ class ReinforcedAgent:
         # self.q_table[self.states_index[state], action] = 0
         # =====================
 
-        # Obtener los índices de los estados en la tabla Q
-        state_index = self.states_index[state]
-        new_state_index = self.states_index[new_state]
+        # Obtener el índice del estado actual en la tabla Q
+        q_prime = np.max(self.q_table[self.states_index[new_state]])
+        # Obtener el índice del estado actual en la tabla Q
+        index = self.states_index[state]
+        old_q_value = self.q_table[index, action]
 
-        # Actualizar la tabla Q utilizando la ecuación de actualización de Q-Learning
-        self.q_table[state_index, action] = (1 - CAT_LR) * self.q_table[state_index, action] + CAT_LR * (reward + CAT_DISCOUNT_RATE * np.max(self.q_table[new_state_index]))
+
+        # if reward < 0:
+        #     learned_value = self.gamma * q_prime - old_q_value
+        # else:
+        #     learned_value = reward - old_q_value
+
+        learned_value = reward + self.gamma * q_prime - old_q_value
+
+        #learned_value = r + self.gamma * q_prime - old_q_value
+        self.q_table[index, action] += self.alpha * learned_value
+
+        # print('valor aprendido', learned_value)
+        # print('sumado', self.alpha * learned_value)
 
     
     def update_exploration(self, n_game):
         # Disminuir la tasa de exploración a medida que el agente juega más juegos
-        self.exploration_rate = MOUSE_MIN_EXPLORATION_RATE + (MOUSE_MAX_EXPLORATION_RATE - MOUSE_MIN_EXPLORATION_RATE) * np.exp(-MOUSE_EXPLORATION_DECAY_RATE * n_game)
+        pass
 
 class RLCat(ReinforcedAgent):
 
-    def __init__(self, position, table_path = None):
+    def __init__(self, position, table_path = None, alpha = CAT_LR, gamma = CAT_DISCOUNT_RATE):
 
-        super().__init__(position, table_path)
+        super().__init__(position, table_path, alpha = CAT_LR, gamma = CAT_DISCOUNT_RATE)
 
     def get_reward(self, lab_map, action, old_cat_pos, new_cat_pos, old_mouse_pos, new_mouse_pos):
         # ===== COMPLETAR =====
@@ -126,13 +141,24 @@ class RLCat(ReinforcedAgent):
         # reward = 0
         # =====================
 
+        distancia_old = len(bfs_search(lab_map, old_cat_pos, old_mouse_pos))
+        distancia_new = len(bfs_search(lab_map, new_cat_pos, new_mouse_pos))
 
+        # print("old_cat_pos: ", old_cat_pos[0], old_cat_pos[1])
+        # print("new_cat_pos: ", new_cat_pos[0], new_cat_pos[1])
         # Si el gato captura al ratón, dar una recompensa positiva
-        if new_cat_pos == new_mouse_pos:
-            reward = 1
-        # Si el gato se mueve pero no captura al ratón, dar una recompensa negativa
-        else:
-            reward = -0.1
+        if new_cat_pos[0] == new_mouse_pos[0] and new_cat_pos[1] == new_mouse_pos[1]:
+            reward = 30
+        # Si el gato se mueve y se acerca al ratón, dar una recompensa positiva
+        elif distancia_new < distancia_old:
+            reward = 5
+        # Si la distancia se mantiene, dar una recompensa neutra
+        elif distancia_new == distancia_old:
+            reward = 0
+        # Si la distancia aumenta, dar una recompensa negativa
+        elif distancia_new > distancia_old:
+            reward = -5
+
         return reward
     
     def update_exploration(self, n_game):
@@ -149,11 +175,20 @@ class RLCat(ReinforcedAgent):
         if n_game % 1000 == 0:
             np.save(os.path.join(CURRENT_PATH, "data", f"QTableCat{n_game}.npy"), self.q_table)
             print(f"Epsilon: {self.exploration_rate} | Guardando QTable en agents/data/QTableCat{n_game}.npy")
+
+    def update_exploration(self, n_game):
+        # Disminuir la tasa de exploración a medida que el gato juega más juegos
+        self.exploration_rate = CAT_MIN_EXPLORATION_RATE + (CAT_MAX_EXPLORATION_RATE - CAT_MIN_EXPLORATION_RATE) * np.exp(-CAT_EXPLORATION_DECAY_RATE * n_game)
+
+        # Cada 1000 partidas, aprovecharemos de guardar la tabla de desempeño del agente
+        if n_game % 1000 == 0:
+            np.save(os.path.join(CURRENT_PATH, "data", f"QTableCat{n_game}.npy"), self.q_table)
+            print(f"Epsilon: {self.exploration_rate} | Guardando QTable en agents/data/QTableCat{n_game}.npy")
     
 class RLMouse(ReinforcedAgent):
-    def __init__(self, position, table_path = None):
+    def __init__(self, position, table_path = None, alpha = MOUSE_LR, gamma = MOUSE_DISCOUNT_RATE):
 
-        super().__init__(position, table_path)
+        super().__init__(position, table_path, alpha = MOUSE_LR, gamma = MOUSE_DISCOUNT_RATE)
 
     def get_reward(self, lab_map, action, old_cat_pos, new_cat_pos, old_mouse_pos, new_mouse_pos):
         # ===== COMPLETAR =====
@@ -161,12 +196,23 @@ class RLMouse(ReinforcedAgent):
         # reward = 0
         # =====================
 
-                # Si el ratón es capturado por el gato, dar una recompensa negativa
-        if new_cat_pos == new_mouse_pos:
-            reward = -1
-        # Si el ratón escapa del gato, dar una recompensa positiva
-        else:
-            reward = 0.1
+        distancia_old = len(bfs_search(lab_map, old_cat_pos, old_mouse_pos))
+        distancia_new = len(bfs_search(lab_map, new_cat_pos, new_mouse_pos))
+
+        # Si el ratón es capturado por el gato, dar una recompensa negativa
+        if new_cat_pos[0] == new_mouse_pos[0] and new_cat_pos[1] == new_mouse_pos[1]:
+            reward = -30
+        # Si el gato se mueve y se acerca al ratón, dar una recompensa negativa
+        elif distancia_new < distancia_old:
+            reward = -5
+        # Si la distancia aumenta, dar una recompensa positiva
+        elif distancia_new > distancia_old:
+            reward = 5
+        # Si la distancia se mantiene, dar una recompensa neutra
+        elif distancia_new == distancia_old:
+            reward = 2
+
+
         return reward
     
     def update_exploration(self, n_game):
@@ -177,7 +223,6 @@ class RLMouse(ReinforcedAgent):
 
         # Disminuir la tasa de exploración a medida que el ratón juega más juegos
         self.exploration_rate = MOUSE_MIN_EXPLORATION_RATE + (MOUSE_MAX_EXPLORATION_RATE - MOUSE_MIN_EXPLORATION_RATE) * np.exp(-MOUSE_EXPLORATION_DECAY_RATE * n_game)
-
 
         # Cada 1000 partidas, aprovecharemos de guardar la tabla de desempeño del agente
         if n_game % 1000 == 0:

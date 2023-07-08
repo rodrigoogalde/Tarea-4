@@ -5,7 +5,7 @@ import os
 import random
 
 # Tiempo entre cada movimiento del juego
-TIME_DELAY = 0.2
+TIME_DELAY = 0.1
 
 # Máximo de pasos por juego
 MAX_STEPS = 500

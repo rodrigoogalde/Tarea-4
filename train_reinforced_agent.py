@@ -6,7 +6,7 @@ from agents.neural import NNCat, NNMouse
 from agents.reinforced import RLCat, RLMouse
 
 # Si deseamos o no visualización en el juego
-VISUALIZATION = True
+VISUALIZATION = False
 
 # Número de partidas a jugar para entrenar
 NUM_EPISODES = 100000

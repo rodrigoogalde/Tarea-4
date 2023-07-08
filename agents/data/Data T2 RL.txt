@@ -1,0 +1,180 @@
+Game 100 | Mean Steps: 312 | MAX: 500 | MIN: 22 | Total Steps: 31228
+Game 200 | Mean Steps: 348 | MAX: 500 | MIN: 25 | Total Steps: 34833
+Game 300 | Mean Steps: 318 | MAX: 500 | MIN: 20 | Total Steps: 31832
+Game 400 | Mean Steps: 336 | MAX: 500 | MIN: 39 | Total Steps: 33651
+Game 500 | Mean Steps: 252 | MAX: 500 | MIN: 22 | Total Steps: 25277
+Game 600 | Mean Steps: 284 | MAX: 500 | MIN: 19 | Total Steps: 28439
+Game 700 | Mean Steps: 244 | MAX: 500 | MIN: 6 | Total Steps: 24483
+Game 800 | Mean Steps: 265 | MAX: 500 | MIN: 14 | Total Steps: 26593
+Game 900 | Mean Steps: 249 | MAX: 500 | MIN: 14 | Total Steps: 24919
+Epsilon: 0.904846934294156 | Guardando QTable en agents/data/QTableCat1000.npy
+Epsilon: 0.904846934294156 | Guardando QTable en agents/data/QTableMouse1000.npy
+Game 1000 | Mean Steps: 232 | MAX: 500 | MIN: 18 | Total Steps: 23297
+Game 1100 | Mean Steps: 207 | MAX: 500 | MIN: 24 | Total Steps: 20751
+Game 1200 | Mean Steps: 220 | MAX: 500 | MIN: 16 | Total Steps: 22013
+Game 1300 | Mean Steps: 198 | MAX: 500 | MIN: 9 | Total Steps: 19891
+Game 1400 | Mean Steps: 169 | MAX: 500 | MIN: 14 | Total Steps: 16908
+Game 1500 | Mean Steps: 158 | MAX: 500 | MIN: 5 | Total Steps: 15844
+Game 1600 | Mean Steps: 158 | MAX: 500 | MIN: 9 | Total Steps: 15899
+Game 1700 | Mean Steps: 147 | MAX: 500 | MIN: 11 | Total Steps: 14759
+Game 1800 | Mean Steps: 159 | MAX: 500 | MIN: 8 | Total Steps: 15960
+Game 1900 | Mean Steps: 143 | MAX: 500 | MIN: 6 | Total Steps: 14374
+Epsilon: 0.818748880002674 | Guardando QTable en agents/data/QTableCat2000.npy
+Epsilon: 0.818748880002674 | Guardando QTable en agents/data/QTableMouse2000.npy
+Game 2000 | Mean Steps: 132 | MAX: 500 | MIN: 7 | Total Steps: 13257
+Game 2100 | Mean Steps: 142 | MAX: 500 | MIN: 18 | Total Steps: 14269
+Game 2200 | Mean Steps: 108 | MAX: 318 | MIN: 10 | Total Steps: 10881
+Game 2300 | Mean Steps: 121 | MAX: 500 | MIN: 10 | Total Steps: 12143
+Game 2400 | Mean Steps: 151 | MAX: 500 | MIN: 7 | Total Steps: 15148
+Game 2500 | Mean Steps: 110 | MAX: 365 | MIN: 14 | Total Steps: 11012
+Game 2600 | Mean Steps: 101 | MAX: 433 | MIN: 10 | Total Steps: 10117
+Game 2700 | Mean Steps: 99 | MAX: 339 | MIN: 14 | Total Steps: 9947
+Game 2800 | Mean Steps: 113 | MAX: 413 | MIN: 15 | Total Steps: 11343
+Game 2900 | Mean Steps: 101 | MAX: 331 | MIN: 6 | Total Steps: 10153
+Epsilon: 0.7408441388596497 | Guardando QTable en agents/data/QTableCat3000.npy
+Epsilon: 0.7408441388596497 | Guardando QTable en agents/data/QTableMouse3000.npy
+Game 3000 | Mean Steps: 88 | MAX: 434 | MIN: 13 | Total Steps: 8844
+Game 3100 | Mean Steps: 84 | MAX: 339 | MIN: 8 | Total Steps: 8426
+Game 3200 | Mean Steps: 91 | MAX: 266 | MIN: 11 | Total Steps: 9151
+Game 3300 | Mean Steps: 90 | MAX: 328 | MIN: 7 | Total Steps: 9012
+Game 3400 | Mean Steps: 97 | MAX: 294 | MIN: 9 | Total Steps: 9707
+Game 3500 | Mean Steps: 82 | MAX: 387 | MIN: 7 | Total Steps: 8278
+Game 3600 | Mean Steps: 96 | MAX: 464 | MIN: 10 | Total Steps: 9660
+Game 3700 | Mean Steps: 82 | MAX: 377 | MIN: 10 | Total Steps: 8256
+Game 3800 | Mean Steps: 82 | MAX: 318 | MIN: 15 | Total Steps: 8278
+Game 3900 | Mean Steps: 86 | MAX: 277 | MIN: 7 | Total Steps: 8685
+Epsilon: 0.6703530140310358 | Guardando QTable en agents/data/QTableCat4000.npy
+Epsilon: 0.6703530140310358 | Guardando QTable en agents/data/QTableMouse4000.npy
+Game 4000 | Mean Steps: 95 | MAX: 338 | MIN: 7 | Total Steps: 9575
+Game 4100 | Mean Steps: 79 | MAX: 369 | MIN: 7 | Total Steps: 7939
+Game 4200 | Mean Steps: 82 | MAX: 297 | MIN: 12 | Total Steps: 8237
+Game 4300 | Mean Steps: 72 | MAX: 211 | MIN: 12 | Total Steps: 7266
+Game 4400 | Mean Steps: 73 | MAX: 243 | MIN: 9 | Total Steps: 7361
+Game 4500 | Mean Steps: 72 | MAX: 277 | MIN: 18 | Total Steps: 7286
+Game 4600 | Mean Steps: 72 | MAX: 356 | MIN: 13 | Total Steps: 7207
+Game 4700 | Mean Steps: 65 | MAX: 362 | MIN: 15 | Total Steps: 6557
+Game 4800 | Mean Steps: 71 | MAX: 247 | MIN: 8 | Total Steps: 7124
+Game 4900 | Mean Steps: 80 | MAX: 309 | MIN: 14 | Total Steps: 8010
+Epsilon: 0.6065700066466622 | Guardando QTable en agents/data/QTableCat5000.npy
+Epsilon: 0.6065700066466622 | Guardando QTable en agents/data/QTableMouse5000.npy
+Game 5000 | Mean Steps: 65 | MAX: 226 | MIN: 9 | Total Steps: 6513
+Game 5100 | Mean Steps: 75 | MAX: 237 | MIN: 20 | Total Steps: 7594
+Game 5200 | Mean Steps: 74 | MAX: 294 | MIN: 12 | Total Steps: 7444
+Game 5300 | Mean Steps: 69 | MAX: 314 | MIN: 13 | Total Steps: 6988
+Game 5400 | Mean Steps: 71 | MAX: 293 | MIN: 10 | Total Steps: 7163
+Game 5500 | Mean Steps: 69 | MAX: 247 | MIN: 8 | Total Steps: 6952
+Game 5600 | Mean Steps: 63 | MAX: 194 | MIN: 13 | Total Steps: 6326
+Game 5700 | Mean Steps: 61 | MAX: 248 | MIN: 5 | Total Steps: 6129
+Game 5800 | Mean Steps: 69 | MAX: 265 | MIN: 14 | Total Steps: 6931
+Game 5900 | Mean Steps: 62 | MAX: 270 | MIN: 11 | Total Steps: 6247
+Epsilon: 0.5488567549304171 | Guardando QTable en agents/data/QTableCat6000.npy
+Epsilon: 0.5488567549304171 | Guardando QTable en agents/data/QTableMouse6000.npy
+Game 6000 | Mean Steps: 65 | MAX: 260 | MIN: 9 | Total Steps: 6508
+Game 6100 | Mean Steps: 71 | MAX: 202 | MIN: 13 | Total Steps: 7143
+Game 6200 | Mean Steps: 56 | MAX: 139 | MIN: 14 | Total Steps: 5647
+Game 6300 | Mean Steps: 54 | MAX: 170 | MIN: 9 | Total Steps: 5443
+Game 6400 | Mean Steps: 57 | MAX: 155 | MIN: 14 | Total Steps: 5782
+Game 6500 | Mean Steps: 58 | MAX: 198 | MIN: 8 | Total Steps: 5879
+Game 6600 | Mean Steps: 63 | MAX: 190 | MIN: 10 | Total Steps: 6375
+Game 6700 | Mean Steps: 60 | MAX: 198 | MIN: 3 | Total Steps: 6082
+Game 6800 | Mean Steps: 64 | MAX: 276 | MIN: 15 | Total Steps: 6419
+Game 6900 | Mean Steps: 57 | MAX: 308 | MIN: 15 | Total Steps: 5722
+Epsilon: 0.4966356452610303 | Guardando QTable en agents/data/QTableCat7000.npy
+Epsilon: 0.4966356452610303 | Guardando QTable en agents/data/QTableMouse7000.npy
+Game 7000 | Mean Steps: 58 | MAX: 186 | MIN: 4 | Total Steps: 5855
+Game 7100 | Mean Steps: 62 | MAX: 194 | MIN: 9 | Total Steps: 6252
+Game 7200 | Mean Steps: 71 | MAX: 328 | MIN: 10 | Total Steps: 7130
+Game 7300 | Mean Steps: 61 | MAX: 187 | MIN: 14 | Total Steps: 6125
+Game 7400 | Mean Steps: 59 | MAX: 211 | MIN: 10 | Total Steps: 5985
+Game 7500 | Mean Steps: 58 | MAX: 178 | MIN: 10 | Total Steps: 5878
+Game 7600 | Mean Steps: 62 | MAX: 208 | MIN: 8 | Total Steps: 6241
+Game 7700 | Mean Steps: 60 | MAX: 210 | MIN: 21 | Total Steps: 6062
+Game 7800 | Mean Steps: 57 | MAX: 268 | MIN: 14 | Total Steps: 5773
+Game 7900 | Mean Steps: 55 | MAX: 175 | MIN: 6 | Total Steps: 5577
+Epsilon: 0.44938403122080983 | Guardando QTable en agents/data/QTableCat8000.npy
+Epsilon: 0.44938403122080983 | Guardando QTable en agents/data/QTableMouse8000.npy        
+Game 8000 | Mean Steps: 56 | MAX: 186 | MIN: 12 | Total Steps: 5636
+Game 8100 | Mean Steps: 54 | MAX: 176 | MIN: 5 | Total Steps: 5431
+Game 8200 | Mean Steps: 50 | MAX: 172 | MIN: 6 | Total Steps: 5071
+Game 8300 | Mean Steps: 54 | MAX: 171 | MIN: 12 | Total Steps: 5405
+Game 8400 | Mean Steps: 50 | MAX: 202 | MIN: 5 | Total Steps: 5015
+Game 8500 | Mean Steps: 57 | MAX: 281 | MIN: 9 | Total Steps: 5764
+Game 8600 | Mean Steps: 57 | MAX: 179 | MIN: 14 | Total Steps: 5716
+Game 8700 | Mean Steps: 55 | MAX: 189 | MIN: 7 | Total Steps: 5561
+Game 8800 | Mean Steps: 55 | MAX: 163 | MIN: 7 | Total Steps: 5504
+Game 8900 | Mean Steps: 62 | MAX: 234 | MIN: 14 | Total Steps: 6289
+Epsilon: 0.40662900277462505 | Guardando QTable en agents/data/QTableCat9000.npy
+Epsilon: 0.40662900277462505 | Guardando QTable en agents/data/QTableMouse9000.npy        
+Game 9000 | Mean Steps: 54 | MAX: 183 | MIN: 12 | Total Steps: 5478
+Game 9100 | Mean Steps: 53 | MAX: 228 | MIN: 11 | Total Steps: 5305
+Game 9200 | Mean Steps: 54 | MAX: 306 | MIN: 10 | Total Steps: 5431
+Game 9300 | Mean Steps: 54 | MAX: 184 | MIN: 11 | Total Steps: 5445
+Game 9400 | Mean Steps: 56 | MAX: 166 | MIN: 13 | Total Steps: 5642
+Game 9500 | Mean Steps: 47 | MAX: 148 | MIN: 7 | Total Steps: 4771
+Game 9600 | Mean Steps: 55 | MAX: 182 | MIN: 14 | Total Steps: 5512
+Game 9700 | Mean Steps: 60 | MAX: 225 | MIN: 11 | Total Steps: 6058
+Game 9800 | Mean Steps: 51 | MAX: 144 | MIN: 12 | Total Steps: 5199
+Game 9900 | Mean Steps: 57 | MAX: 198 | MIN: 7 | Total Steps: 5775
+Epsilon: 0.36794265322732517 | Guardando QTable en agents/data/QTableCat10000.npy
+Epsilon: 0.36794265322732517 | Guardando QTable en agents/data/QTableMouse10000.npy       
+Game 10000 | Mean Steps: 55 | MAX: 187 | MIN: 15 | Total Steps: 5576
+Game 10100 | Mean Steps: 56 | MAX: 192 | MIN: 5 | Total Steps: 5688
+Game 10200 | Mean Steps: 53 | MAX: 248 | MIN: 12 | Total Steps: 5381
+Game 10300 | Mean Steps: 50 | MAX: 199 | MIN: 10 | Total Steps: 5065
+Game 10400 | Mean Steps: 51 | MAX: 168 | MIN: 7 | Total Steps: 5188
+Game 10500 | Mean Steps: 53 | MAX: 214 | MIN: 9 | Total Steps: 5341
+Game 10600 | Mean Steps: 55 | MAX: 177 | MIN: 11 | Total Steps: 5526
+Game 10700 | Mean Steps: 53 | MAX: 197 | MIN: 14 | Total Steps: 5338
+Game 10800 | Mean Steps: 54 | MAX: 174 | MIN: 12 | Total Steps: 5400
+Game 10900 | Mean Steps: 52 | MAX: 187 | MIN: 10 | Total Steps: 5246
+Epsilon: 0.33293779658970973 | Guardando QTable en agents/data/QTableCat11000.npy
+Epsilon: 0.33293779658970973 | Guardando QTable en agents/data/QTableMouse11000.npy       
+Game 11000 | Mean Steps: 49 | MAX: 158 | MIN: 12 | Total Steps: 4907
+Game 11100 | Mean Steps: 46 | MAX: 184 | MIN: 9 | Total Steps: 4690
+Game 11200 | Mean Steps: 64 | MAX: 215 | MIN: 9 | Total Steps: 6423
+Game 11300 | Mean Steps: 54 | MAX: 165 | MIN: 10 | Total Steps: 5425
+Game 11400 | Mean Steps: 50 | MAX: 194 | MIN: 8 | Total Steps: 5042
+Game 11500 | Mean Steps: 54 | MAX: 204 | MIN: 11 | Total Steps: 5409
+Game 11600 | Mean Steps: 48 | MAX: 205 | MIN: 9 | Total Steps: 4804
+Game 11700 | Mean Steps: 49 | MAX: 213 | MIN: 13 | Total Steps: 4982
+Game 11800 | Mean Steps: 51 | MAX: 224 | MIN: 10 | Total Steps: 5142
+Game 11900 | Mean Steps: 56 | MAX: 235 | MIN: 12 | Total Steps: 5614
+Epsilon: 0.3012640924910109 | Guardando QTable en agents/data/QTableCat12000.npy
+Epsilon: 0.3012640924910109 | Guardando QTable en agents/data/QTableMouse12000.npy        
+Game 12000 | Mean Steps: 53 | MAX: 172 | MIN: 14 | Total Steps: 5322
+Game 12100 | Mean Steps: 52 | MAX: 192 | MIN: 12 | Total Steps: 5254
+Game 12300 | Mean Steps: 49 | MAX: 193 | MIN: 9 | Total Steps: 4975
+Game 12400 | Mean Steps: 57 | MAX: 239 | MIN: 11 | Total Steps: 5725
+Game 12500 | Mean Steps: 53 | MAX: 170 | MIN: 10 | Total Steps: 5327
+Game 12600 | Mean Steps: 52 | MAX: 181 | MIN: 10 | Total Steps: 5240
+Game 12700 | Mean Steps: 49 | MAX: 243 | MIN: 17 | Total Steps: 4923
+Game 12800 | Mean Steps: 52 | MAX: 181 | MIN: 14 | Total Steps: 5240
+Game 12900 | Mean Steps: 48 | MAX: 200 | MIN: 12 | Total Steps: 4890
+Game 13000 | Mean Steps: 49 | MAX: 218 | MIN: 8 | Total Steps: 4949
+Epsilon: 0.28643689424521228 | Guardando QTable en agents/data/QTableCat13000.npy       
+Epsilon: 0.28643689424521228 | Guardando QTable en agents/data/QTableMouse13000.npy    
+Game 13100 | Mean Steps: 51 | MAX: 167 | MIN: 11 | Total Steps: 5111
+Game 13200 | Mean Steps: 52 | MAX: 149 | MIN: 9 | Total Steps: 5252
+Game 13300 | Mean Steps: 52 | MAX: 171 | MIN: 8 | Total Steps: 5212
+Game 13400 | Mean Steps: 56 | MAX: 168 | MIN: 11 | Total Steps: 5682
+Game 13500 | Mean Steps: 51 | MAX: 239 | MIN: 10 | Total Steps: 5154
+Game 13600 | Mean Steps: 50 | MAX: 168 | MIN: 12 | Total Steps: 5010
+Game 13700 | Mean Steps: 60 | MAX: 184 | MIN: 9 | Total Steps: 6011
+Game 13800 | Mean Steps: 54 | MAX: 200 | MIN: 9 | Total Steps: 5406
+Game 13900 | Mean Steps: 51 | MAX: 264 | MIN: 12 | Total Steps: 5135
+Epsilon: 0.24667230424521228 | Guardando QTable en agents/data/QTableCat14000.npy       
+Epsilon: 0.24667230424521228 | Guardando QTable en agents/data/QTableMouse14000.npy     
+Game 14000 | Mean Steps: 46 | MAX: 163 | MIN: 10 | Total Steps: 4669
+Game 14100 | Mean Steps: 50 | MAX: 303 | MIN: 7 | Total Steps: 5034
+Game 14200 | Mean Steps: 53 | MAX: 231 | MIN: 4 | Total Steps: 5313
+Game 14300 | Mean Steps: 49 | MAX: 200 | MIN: 9 | Total Steps: 4983
+Game 14400 | Mean Steps: 53 | MAX: 241 | MIN: 9 | Total Steps: 5394
+Game 14500 | Mean Steps: 57 | MAX: 246 | MIN: 9 | Total Steps: 5731
+Game 14600 | Mean Steps: 52 | MAX: 161 | MIN: 10 | Total Steps: 5215
+Game 14700 | Mean Steps: 55 | MAX: 199 | MIN: 11 | Total Steps: 5568
+Game 14800 | Mean Steps: 53 | MAX: 230 | MIN: 11 | Total Steps: 5314
+Game 14900 | Mean Steps: 55 | MAX: 372 | MIN: 8 | Total Steps: 5591
+Epsilon: 0.22320784713241495 | Guardando QTable en agents/data/QTableCat15000.npy       
+Epsilon: 0.22320784713241495 | Guardando QTable en agents/data/QTableMouse15000.npy     
+Game 15000 | Mean Steps: 56 | MAX: 336 | MIN: 11 | Total Steps: 5680
+Game 15100 | Mean Steps: 53 | MAX: 188 | MIN: 11 | Total Steps: 5325

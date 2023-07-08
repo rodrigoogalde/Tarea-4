@@ -1,0 +1,11 @@
+Game 100 | Mean Steps: 484 | MAX: 500 | MIN: 229 | Total Steps: 48487
+Game 200 | Mean Steps: 480 | MAX: 500 | MIN: 116 | Total Steps: 48000
+Game 300 | Mean Steps: 483 | MAX: 500 | MIN: 132 | Total Steps: 48354
+Game 400 | Mean Steps: 484 | MAX: 500 | MIN: 88 | Total Steps: 48411
+Game 500 | Mean Steps: 478 | MAX: 500 | MIN: 133 | Total Steps: 47895
+Game 600 | Mean Steps: 479 | MAX: 500 | MIN: 68 | Total Steps: 47905
+Game 700 | Mean Steps: 480 | MAX: 500 | MIN: 82 | Total Steps: 48063
+Game 800 | Mean Steps: 486 | MAX: 500 | MIN: 128 | Total Steps: 48653
+Game 900 | Mean Steps: 476 | MAX: 500 | MIN: 80 | Total Steps: 47605
+Game 1000 | Mean Steps: 467 | MAX: 500 | MIN: 63 | Total Steps: 46791
+Game 1100 | Mean Steps: 488 | MAX: 500 | MIN: 128 | Total Steps: 48841
